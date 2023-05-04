@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mi.mall1227.mapper.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.mi.mall1227.entity.Product">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="price" column="price" jdbcType="DECIMAL"/>
+        <result property="stock" column="stock" jdbcType="INTEGER"/>
+        <result property="propic" column="proPic" jdbcType="VARCHAR"/>
+        <result property="ishot" column="isHot" jdbcType="BIT"/>
+        <result property="isswiper" column="isSwiper" jdbcType="BIT"/>
+        <result property="swiperpic" column="swiperPic" jdbcType="VARCHAR"/>
+        <result property="swipersort" column="swiperSort" jdbcType="INTEGER"/>
+        <result property="typeid" column="typeId" jdbcType="INTEGER"/>
+        <result property="hotdatetime" column="hotDateTime" jdbcType="TIMESTAMP"/>
+        <result property="productintroimgs" column="productIntroImgs" jdbcType="VARCHAR"/>
+        <result property="productparaimgs" column="productParaImgs" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,price,
+        stock,proPic,isHot,
+        isSwiper,swiperPic,swiperSort,
+        typeId,hotDateTime,productIntroImgs,
+        productParaImgs,description
+    </sql>
+</mapper>

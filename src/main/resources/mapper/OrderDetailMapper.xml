@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mi.mall1227.mapper.OrderDetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.mi.mall1227.entity.OrderDetail">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="mid" column="mId" jdbcType="INTEGER"/>
+        <result property="goodsid" column="goodsId" jdbcType="INTEGER"/>
+        <result property="goodsnumber" column="goodsNumber" jdbcType="INTEGER"/>
+        <result property="goodsprice" column="goodsPrice" jdbcType="DECIMAL"/>
+        <result property="goodsname" column="goodsName" jdbcType="VARCHAR"/>
+        <result property="goodspic" column="goodsPic" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,mId,goodsId,
+        goodsNumber,goodsPrice,goodsName,
+        goodsPic
+    </sql>
+</mapper>

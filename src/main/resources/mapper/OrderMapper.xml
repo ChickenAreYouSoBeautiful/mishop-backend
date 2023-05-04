@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mi.mall1227.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.mi.mall1227.entity.Order">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="orderno" column="orderNo" jdbcType="VARCHAR"/>
+        <result property="userid" column="userId" jdbcType="VARCHAR"/>
+        <result property="totalprice" column="totalPrice" jdbcType="DECIMAL"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="consignee" column="consignee" jdbcType="VARCHAR"/>
+        <result property="telnumber" column="telNumber" jdbcType="VARCHAR"/>
+        <result property="createdate" column="createDate" jdbcType="TIMESTAMP"/>
+        <result property="paydate" column="payDate" jdbcType="TIMESTAMP"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,orderNo,userId,
+        totalPrice,address,consignee,
+        telNumber,createDate,payDate,
+        status
+    </sql>
+</mapper>
